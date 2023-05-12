@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -am | sed 's/\n/, /g'
+ls -pd * | sed -e '$s/$/\n/' -e 's/\(.*\)\n/\1, /g'
